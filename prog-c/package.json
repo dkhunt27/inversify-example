@@ -1,0 +1,30 @@
+{
+  "name": "prog-c",
+  "version": "0.1.0",
+  "license": "MIT",
+  "snyk": true,
+  "main": "dist/src/index.js",
+  "files": [
+    "dist/**/*",
+    "package.json",
+    "README.md",
+    "yarn.lock",
+    ".yarnrc"
+  ],
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist && yarn tsc -p tsconfig.release.json",
+    "lint:nofix": "yarn eslint . --ext .ts",
+    "lint": "yarn eslint . --ext .ts --fix",
+    "test": "yarn jest"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "inversify": "^5.0.1",
+    "reflect-metadata": "^0.1.13",
+    "tslib": "~2.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.3"
+  }
+}
